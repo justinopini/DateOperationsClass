@@ -20,24 +20,24 @@ int main(){
                 int n1 =0;
                 int n2 =0;
                 int n3 =0;
-                std::cout << "Enter Year: ";//prompt n3
+                std::cout << "Enter Year: ";//prompt Year
                 std::cin >> n3;
-                while (n3 < 0){//validate n3
+                while (n3 < 0){//validate Year
                         std::cout << "Invalid Year!\nEnter Year: ";
                         std::cin >> n3;
                 }
-                std::cout << "Enter Month: ";//prompt n2
+                std::cout << "Enter Month: ";//prompt Month
                 std::cin >> n2;
-                while (n2 > 12 || n2 < 1){//validate n2
+                while (n2 > 12 || n2 < 1){//validate Month
                         std::cout << "Invalid Month!\nEnter Month: ";
                         std::cin >> n2;
                 }
-                std::cout << "Enter Day: ";//prompt n1
+                std::cout << "Enter Day: ";//prompt Day
                 std::cin >> n1;
                 int fx = (28 + (n2+(n2/8))%2)+(2%n2+(2/n2));
-                if (n3%4 != 0 && n2 == 2)//If n2 is feb and not in leap n3, 1 n1 is subtracted(default 29)
+                if (n3%4 != 0 && n2 == 2)//If Day is feb and not in leap year, 1 day is subtracted(default 29)
                         fx -= 1;
-                 while (n1 > fx || n1 < 1){//validate n1
+                 while (n1 > fx || n1 < 1){//validate Day
                         std::cout << "Invalid Day!\nEnter Day: ";
                         std::cin >> n1;
                 }
